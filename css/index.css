@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+div.logo{
+    border: 1px solid red;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 10%;
+}
+
+div.logo > img{
+    max-width: 100%;
+    z-index: 2;
+}
+
+div.logo > span{
+    width: 15%;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    filter: blur(20px);
+    z-index: 1;
+    margin-left: -16%;
+}
+
+div.bar{
+    border: 1px solid #fff;
+}
+
+div.gateWay{
+    height: 100vh;
+    display: flex;
+}
+
+div.gateWay > .house{
+    width: 50%;
+    filter: grayscale(50%);
+}
+
+.house > a > img{
+    max-width: 100%;
+}
+
+div.gateWay > .JS:hover{
+    filter: grayscale(0%);
+}
+
+div.gateWay > .NQ:hover{
+    filter: grayscale(0%);
+}
