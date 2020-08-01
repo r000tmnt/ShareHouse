@@ -13,12 +13,12 @@ div.logo{
 }
 
 div.logo > img{
-    max-width: 100%;
+    width: 15vw;
     z-index: 2;
 }
 
 div.logo > span{
-    width: 15%;
+    width: 15vw;
     background-color: whitesmoke;
     border-radius: 50%;
     filter: blur(20px);
