@@ -9,7 +9,7 @@ div.logo{
     width: 100%;
     display: flex;
     justify-content: center;
-    top: 10%;
+    top: 45vh;
 }
 
 div.logo > img{
@@ -31,16 +31,16 @@ div.bar{
 }
 
 div.gateWay{
-    height: 100vh;
     display: flex;
 }
 
 div.gateWay > .house{
-    width: 50%;
+    width: 50vw;
+    height: 100vh;
     filter: grayscale(50%);
 }
 
-.house > a > img{
+div.gateWay > .house > a > img{
     max-width: 100%;
 }
 
@@ -50,4 +50,32 @@ div.gateWay > .JS:hover{
 
 div.gateWay > .NQ:hover{
     filter: grayscale(0%);
+}
+
+@media (max-width: 1300px){
+
+    div.logo > img{
+        width: 30vw;
+    }
+
+    div.logo > span{
+        width: 30vw;
+        margin-left: -30%;
+    }
+
+    div.gateWay{
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.gateWay > .house{
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+    }
+
+    div.gateWay > .house > a > img{
+        object-fit: cover;
+    }
+
 }
