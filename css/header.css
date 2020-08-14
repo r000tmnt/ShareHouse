@@ -29,8 +29,10 @@ header{
     border: 1px solid red;
     display: flex;
     justify-content: space-between;
-    background-image: url("../images/test.png");
-    background-size: contain;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%), url("../images/20190623_101821.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 
 div.logo{
@@ -91,8 +93,9 @@ div.clock > img{
     max-width: 100%;
     margin-top: -30%;
     margin-left: 30%;
-    animation: rotate 5s infinite linear;
+    animation: rotate 9s infinite linear;
 }
+
 
 div.clear{
     clear: both;
