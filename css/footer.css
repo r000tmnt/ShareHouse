@@ -1,0 +1,20 @@
+footer{
+    border: 1px solid red;
+    display: flex;
+}
+
+ul.contact > li{
+    border: 1px solid purple;
+    list-style: none;
+}
+
+span{
+    border: 1px solid greenyellow;
+    margin-left: 25vw;
+}
+
+span > h4{
+    border: 1px solid maroon;
+    margin-top: 5vh;
+    font-weight: 300;
+}

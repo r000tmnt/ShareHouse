@@ -29,6 +29,8 @@ header{
     border: 1px solid red;
     display: flex;
     justify-content: space-between;
+    background-image: url("../images/test.png");
+    background-size: contain;
 }
 
 div.logo{
@@ -76,6 +78,7 @@ div.button > a > h1{
 div.button > a:hover h1{
     color: deepskyblue;
     animation: hover 2s ease-in-out infinite alternate;
+    border-radius: 5%;
 }
 
 div.clock{
