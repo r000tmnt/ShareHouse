@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+div.warp{
+    display: flex;
+}
+
+aside.rooms{
+    margin-right: auto;
+}
+
+aside.rooms > ul > li{
+    list-style: none;
+}
+
+button{
+    width: 20vw;
+    height: 10vh;
+    font-size: 2vw;
+}
+
+main.houseFlat > div{
+    width: 80%;
+    position: relative;
+}
+
+main.houseFlat > div > img{
+    max-width: 100%;
+}
+
+div.respond{
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
