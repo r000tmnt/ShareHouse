@@ -24,7 +24,7 @@ div.gateWay > .house > a > h1{
 
 /*Bottons*/
 
-button{
+.btn{
     border: 1px solid #222;
     border-radius: 25px;
     font-family: 'Noto Sans TC', sans-serif;
@@ -32,4 +32,13 @@ button{
     height: 10vh;
     font-size: 2vw;
     background-color: #ffd44d;
+    cursor: pointer;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.btn:hover{
+    background-color: #ffebc3;
 }

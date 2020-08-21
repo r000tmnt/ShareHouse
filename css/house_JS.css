@@ -1,12 +1,20 @@
 body{
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
-header > nav > a:first-child::before{
+div.banner{
+    background-image: url("../images/20190623_101821.jpg");
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+}
+
+nav > a:first-child::before{
     content: url("../images/indicatior_arrow.png");
     float: left;
-    margin-left: -3.1vw;
     margin-top: 0.5vh;
     animation: indicator 0.5s ease-in-out infinite alternate;
 }
@@ -14,9 +22,11 @@ header > nav > a:first-child::before{
 div.warp{
     margin-top: 5vh;
     display: flex;
+    background: linear-gradient(to top, rgb(210, 237, 245) 10%, white 100%);
 }
 
 aside.rooms{
+    margin-left: 5vw;
     margin-right: auto;
 }
 
@@ -25,9 +35,17 @@ aside.rooms > h1{
     border-bottom-style: dashed;
 }
 
+aside.rooms > h1::before{
+    content: url("../images/house_icon.png");
+}
+
 aside.rooms > ul > li{
     list-style: none;
     margin: 2vh 0;
+}
+
+main.houseFlat{
+    margin: 10vh 0;
 }
 
 main.houseFlat > div{

@@ -18,9 +18,9 @@
 
 @keyframes indicator{
     from{
-        margin-left: -3.1vw;
+        margin-left: -2vw;
     }
     to{
-        margin-left: -3.3vw;
+        margin-left: -2.3vw;
     }
 }

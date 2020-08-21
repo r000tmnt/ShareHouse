@@ -1,11 +1,18 @@
 footer{
     border: 1px solid red;
     display: flex;
+    background-color: rgb(210, 237, 245);
+    color: #222;
+}
+
+ul.contact{
+    margin-left: 5vw;
 }
 
 ul.contact > li{
     border: 1px solid purple;
     list-style: none;
+    cursor: default;
 }
 
 span{

@@ -9,7 +9,7 @@ div.logo{
     margin-left: 2vw;
 }
 
-div.logo > img{
+div.logo > a > img{
     max-width: 100%;
     margin-top: 3vh;
     filter: drop-shadow(5px 2px 5px #222);
@@ -40,12 +40,4 @@ nav > a:hover h1{
     color: deepskyblue;
     animation: hover 2s ease-in-out infinite alternate;
     border-radius: 10px;
-}
-
-div.banner{
-    background-image: url("../images/20190623_101821.jpg");
-    width: 100%;
-    height: 30vh;
-    background-size: cover;
-    background-position: center;
 }
