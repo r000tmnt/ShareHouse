@@ -4,5 +4,11 @@ $(document).ready(function(){
 });
 
 function popUp(){
-    document.getElementById('dialog').style.display="block";
+    var box= document.getElementById('dialog');
+    box.style.display="block";
+}
+
+function close(){
+    var close= document.getElementsByClassName('dialog');
+    close.style.display= "none";
 }
