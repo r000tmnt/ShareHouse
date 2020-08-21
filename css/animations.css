@@ -1,0 +1,26 @@
+@keyframes hover{
+    0%{
+        border: 1px solid rgba(30, 143, 255, 0);
+    }
+    25%{
+        border: 1px solid rgba(30, 143, 255, 0.200);
+    }
+    50%{
+        border: 1px solid rgba(30, 143, 255, 0.400);
+    }
+    75%{
+        border: 2px solid rgba(30, 143, 255, 0.600);
+    }
+    100%{
+        border: 2px solid rgba(30, 143, 255, 0.800);
+    }
+}
+
+@keyframes indicator{
+    from{
+        margin-left: -3.1vw;
+    }
+    to{
+        margin-left: -3.3vw;
+    }
+}

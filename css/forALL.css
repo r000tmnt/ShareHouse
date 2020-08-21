@@ -1,16 +1,17 @@
+/*Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap');
 
 body{
     font-family: 'Noto Sans TC', sans-serif;
 }
 
+.font-color{
+    color: #222;
+}
+
 div.gateWay > .house > a > h1{
     font-weight: 500;
     font-size: 4rem;
-}
-
-button{
-    font-family: 'Noto Sans TC', sans-serif;
 }
 
 @media (max-width: 1300px){
@@ -19,4 +20,16 @@ button{
         font-size: 3rem;
         top: 30vh;
     }
+}
+
+/*Bottons*/
+
+button{
+    border: 1px solid #222;
+    border-radius: 25px;
+    font-family: 'Noto Sans TC', sans-serif;
+    width: 12vw;
+    height: 10vh;
+    font-size: 2vw;
+    background-color: #ffd44d;
 }

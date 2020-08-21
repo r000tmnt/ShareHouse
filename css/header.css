@@ -1,102 +1,51 @@
-@keyframes rotate{
-    from{
-        transform: rotate(0);
-    }
-    to{
-        transform: rotate(359deg);
-    }
-}
-
-@keyframes hover{
-    0%{
-        border: 1px solid rgba(30, 143, 255, 0);
-    }
-    25%{
-        border: 1px solid rgba(30, 143, 255, 0.200);
-    }
-    50%{
-        border: 1px solid rgba(30, 143, 255, 0.400);
-    }
-    75%{
-        border: 2px solid rgba(30, 143, 255, 0.600);
-    }
-    100%{
-        border: 2px solid rgba(30, 143, 255, 0.800);
-    }
-}
-
 header{
     border: 1px solid red;
     display: flex;
-    justify-content: space-between;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%), url("../images/20190623_101821.jpg");
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+    height: 12vh;
 }
 
 div.logo{
     border: 1px solid blue;
-    display: inline-block;
-    margin-top: auto;
+    margin-left: 2vw;
 }
 
 div.logo > img{
     max-width: 100%;
-    padding-top: 3vh;
-    padding-left: 2vw;
+    margin-top: 3vh;
+    filter: drop-shadow(5px 2px 5px #222);
 }
 
 nav{
     border: 1px solid purple;
-    display: flex;
-    margin: 0 auto;
-}
-
-nav > div.button{
-    border: 1px solid blue;
-    height: 5vh;
-    display: inline-block;
-    margin-top: auto;
-    margin-left: 3vw;
-}
-
-div.button > a{
-    width: 5vw;
-    text-decoration: none;
-    border: 1px solid orange;
-    /* position: relative; */
-}
-
-div.button > a > h1{
-    margin: 0;
-    color: #222;
-    top: 50%;
-    left: 50%;
-    transform: translate(0%, -50%);
-    /* position: absolute; */
-}
-
-div.button > a:hover h1{
-    color: deepskyblue;
-    animation: hover 2s ease-in-out infinite alternate;
-    border-radius: 5%;
-}
-
-div.clock{
-    border: 1px solid palevioletred;
-    overflow: hidden;
     margin-left: auto;
 }
 
-div.clock > img{
-    max-width: 100%;
-    margin-top: -30%;
-    margin-left: 30%;
-    animation: rotate 9s infinite linear;
+nav > a{
+    /* border: 1px solid rgba(30, 143, 255); */
+    display: inline-block;
+    margin: 0 3vw;
+    margin-top: 3.5vh;
+    text-decoration: none;
 }
 
+a > h1{
+    border: 1px solid rgba(34, 34, 34, 0);
+    margin: 0;
+    color: #222;
 
-div.clear{
-    clear: both;
+    /* position: absolute; */
+}
+
+nav > a:hover h1{
+    color: deepskyblue;
+    animation: hover 2s ease-in-out infinite alternate;
+    border-radius: 10px;
+}
+
+div.banner{
+    background-image: url("../images/20190623_101821.jpg");
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
 }
