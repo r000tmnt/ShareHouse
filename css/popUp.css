@@ -15,6 +15,10 @@
     margin: 2vw;
 }
 
+.room{
+    display: none;
+}
+
 .popup{
     display: inline-block;
 }
@@ -24,15 +28,6 @@
     margin-left: 5vw;
     color: white;
     position: relative;
-}
-
-.info{
-    color: white;
-    font-size: 2rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -220%);
-    position: absolute;
 }
 
 h1{

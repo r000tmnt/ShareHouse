@@ -1,22 +1,47 @@
-$(document).ready(function(){
+$(document).ready(function(){ //導入頁淡入特效
     $(".JS").hide().fadeIn(1300);
     $(".NQ").hide().fadeIn(2200);
-});
 
-// var box= document.getElementById('dialog');
+    // $(".btn").click(function(){ //開啟指定的房間資料頁面 需修改
+        
+    //     if($(this).is('.A')){
+    //         $("#dialog, .room_a").show();
+    //     }
+    //     else if($(this).is('.B')){
+    //         $("#dialog, .room_b").show();
+    //     }
+    //     else if($(this).is('.C')){
+    //         $("#dialog, .room_c").show();
+    //     }
+    //     else if($(this).is('.D')){
+    //         $("#dialog, .room_d").show();
+    //     }
+    // });
 
-// function popUp(){
-//     box.style.display="block";
-// }
+    // $(".close").click(function(){ //關閉
+    //     $("#dialog, .room").hide();
+    // });
 
-// function close(){
-//     box.style.display= "none";
-// }
+       /*按鈕生成開始*/
+        var num= 25;
+        var source= "../images/house_JS";
 
-$(".btn").click(function(){
-    $("#dialog").show();
-});
+        for(var i=1; i<=num; i++){
+            $(".img_preview").append("<button class='btn'><img></button>");
+        } 
+        // var setnum= [], j, split;
+        // for(j=1; j<=num; j++){
+        //     split = ('0'+j).slice(-2);
+        //     setnum.push(split);
+        //     console.log(setnum);
+        // }
 
-$(".close").click(function(){
-    $(".contain").parent().hide();
+        var k;
+        var l;
+        for(k=0; k<=num; k++){
+            for(l=1; l<=num; l++){
+                $("button > img").attr('src', source + k + l, '.jpg');
+            }
+        }
+
 });

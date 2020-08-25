@@ -26,16 +26,15 @@ div.warp{
 }
 
 aside.rooms{
-    margin-left: 5vw;
-    margin-right: auto;
+    padding: 0 2vw 0 0;
 }
 
 aside.rooms > h1{
-    margin-left: 2vw;
+
     border-bottom-style: dashed;
 }
 
-aside.rooms > h1::before{
+aside.rooms main.houseFlat h1::before{ /*need for alteration*/
     content: url("../images/house_icon.png");
 }
 
@@ -44,8 +43,19 @@ aside.rooms > ul > li{
     margin: 2vh 0;
 }
 
+.info{
+    float: right;
+    font-size: 2rem;
+    margin-bottom: 2vh;
+}
+
+.map > iframe{
+    width: 100%;
+    height: 30vh;
+}
+
 main.houseFlat{
-    margin: 10vh 0;
+    margin: 0 0 0 5vw;
 }
 
 main.houseFlat > div{
@@ -55,8 +65,4 @@ main.houseFlat > div{
 
 main.houseFlat > div > img{
     max-width: 100%;
-}
-
-dialog > .room{
-    border: 1px solid maroon;
 }
