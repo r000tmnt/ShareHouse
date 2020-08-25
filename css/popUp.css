@@ -1,5 +1,5 @@
 #dialog{
-    /* display: none; */
+    display: none;
     background-color: rgba(34, 34, 34, 0.900);
     width: 100%;
     height: 100%;
@@ -23,13 +23,16 @@
     width: 35%;
     margin-left: 5vw;
     color: white;
+    position: relative;
 }
 
 .info{
     color: white;
-    float: right;
-    margin: -84vh 45vw 0 0;
     font-size: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -220%);
+    position: absolute;
 }
 
 h1{
