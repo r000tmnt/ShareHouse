@@ -38,6 +38,5 @@ a > h1{
 
 nav > a:hover h1{
     color: deepskyblue;
-    animation: hover 2s ease-in-out infinite alternate;
-    border-radius: 10px;
+    /* animation: hover 2s ease-in-out infinite alternate; */
 }

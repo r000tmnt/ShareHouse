@@ -1,18 +1,18 @@
 @keyframes hover{
     0%{
-        border: 1px solid rgba(30, 143, 255, 0);
+        color: rgba(30, 143, 255, 0);
     }
     25%{
-        border: 1px solid rgba(30, 143, 255, 0.200);
+        color: rgba(30, 143, 255, 0.200);
     }
     50%{
-        border: 1px solid rgba(30, 143, 255, 0.400);
+        color: rgba(30, 143, 255, 0.400);
     }
     75%{
-        border: 2px solid rgba(30, 143, 255, 0.600);
+        color: rgba(30, 143, 255, 0.600);
     }
     100%{
-        border: 2px solid rgba(30, 143, 255, 0.800);
+        color: rgba(30, 143, 255, 0.800);
     }
 }
 
