@@ -27,7 +27,7 @@ $(document).ready(function(){ //導入頁淡入特效
         var source= "../images/house_JS";
 
         for(var i=1; i<=num; i++){
-            $(".img_preview").append("<button class='btn'><img></button>");
+            $(".img_preview").append("<button class='btn'><a><img></a></button>");
         } 
         // var setnum= [], j, split;
         // for(j=1; j<=num; j++){
@@ -38,9 +38,9 @@ $(document).ready(function(){ //導入頁淡入特效
 
         var k;
         var l;
-        for(k=0; k<=num; k++){
-            for(l=1; l<=num; l++){
-                $("button > img").attr('src', source + k + l, '.jpg');
+        for(k=0; k<=2; k++){
+            for(l=1; l<=9; l++){
+                $("button > a img").attr('src', source + k + l +'.jpg');
             }
         }
 
