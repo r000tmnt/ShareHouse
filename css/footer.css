@@ -4,14 +4,22 @@ footer{
     color: #222;
 }
 
-ul.contact{
+.contact{
     margin-left: 5vw;
 }
 
-ul.contact > li{
+.contact > li{
     border: 1px solid purple;
     list-style: none;
     cursor: default;
+}
+
+.contact > li > a{
+    text-decoration: none;
+}
+
+li > a:hover{
+    color: dodgerblue;
 }
 
 span{
@@ -23,5 +31,5 @@ span{
 span > h4{
     border: 1px solid maroon;
     margin-top: 5vh;
-    font-weight: 300;
+    font-size: 300;
 }
