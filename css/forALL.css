@@ -9,6 +9,14 @@ a{
     cursor: pointer;
 }
 
+.placeHolder{
+    width: 50%
+}
+
+.placeHolder > img{
+    max-width: 100%;
+}
+
 .centered{
     top: 50%;
     left: 50%;
@@ -40,15 +48,19 @@ div.gateWay > .house > a > h1{
 /*Bottons*/
 
 .img_preview{
-    display: block;
-    padding: 5vw;
+    /* border: 1px solid gold; */
+    border-radius: 10px;
+    width: 75%;
+    margin: 5vh auto;
+    padding: 2vw;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .btn{
     border: 1px solid #222;
     font-family: 'Noto Sans TC', sans-serif;
     width: 12vw;
-    height: 10vh;
+    height: 15vh;
     font-size: 2vw;
     background: none;
     cursor: pointer;
@@ -59,12 +71,12 @@ div.gateWay > .house > a > h1{
     outline: none;
 }
 
-/* .btn:hover{
+.btn:hover{
     background-color: #ffebc3;
-} */
+}
 
 a > .btn{
-    border: 1px solid red;
+    border: 1px solid #222;
     overflow: hidden;
 }
 
