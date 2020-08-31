@@ -49,52 +49,49 @@ $(document).ready(function(){ //導入頁淡入特效
     $(".close").click(function(){ //關閉
         $("#dialog, .slider").hide();
     });
+    
+    // var imgID= Array.from(Array(26).keys()); //產生0~25的陣列，從1開始對應照片ID
+    // console.log(imgID);
 
-
-    var current= $(".slider");//當前照片
-    $(".toleft").click(function(){//照片往左切換的判斷
-       current.hide();
-       current.prev().show();
-       
-    //    if( current.is("#JS1")){//當位置在第一張照片時，前一張為最後一張
-    //        $("#JS25").show();
-    //    }
+    $(".slider").click(function(){ //改為點照片換下一張
+        var i;//從1開始對應照片ID
+        
+        for(var i=1; i<=num; i++){
+            if($(this).is("#JS"+i)){
+             $("#JS"+(i+1)).show();
+             $("#JS"+i).hide();
+            }else if($(this).is("#JS25")){ //若為最後一張照片，則跳至第一張照片
+                $("#JS1").show();
+                $("#JS25").hide();
+            }
+        }    
     });
 
-    $(".toright").click(function(){//照片往右切換的判斷
-        current.hide();
-        current.next().show();
-       
-    //    if( current.is("#JS25")){//當位置在第一張照片時，前一張為最後一張
-    //        $("#JS1").show();
-    //    }
-    });    
+    $(".photos").append("<div class='hint'></div>");//產生提示文字的位置
+    $(".hint").html("點圖看下一張");
 
-   
+    // $(".toleft").click(function(){
+    //     var i;//從1開始對應照片ID
+        
+    //         if(i < num && i > 1){
+    //            i= i-1;
+    //         }else{
+    //             i=num;
+    //         }
+    //         $(".slider, #JS"+i).show();
 
-    // var preset= Array.from(Array(26).keys());//產生 00 ~ 25的陣列
-    // console.log(preset);
+    // });
 
-    // for(var i=0; i < 10; i++){ //更改小於10的位置。前面加上"0"
-    //     preset[i]= "0" + preset[i];
-    // }
-    // console.log(preset);
-    
-    // var setnum= [], j, split; 
-    // for(j=1; j<=num; j++){ //產生圖尾端數字01,02,03....25
-    //     split = ('0'+j).slice(-2); //保留兩個數字
-    //     setnum.push(split);
-    //     console.log(setnum);
-    // }
+    // $(".toright").click(function(){
+    //     var i;//從1開始對應照片ID
+        
+    //         if(i < num){
+    //             i= i+1;
+    //         }else{
+    //             i= 1;
+    //         }
+    //         $(".slider, #JS"+i).show();
 
-    // for(var k=0; k<setnum.length; k++){ //取出上列產生的數字  放到路徑尾端
-    //     console.log(setnum[k]);
-    //     $("button > a > img").attr('src', source + setnum[k] +'.jpg');
-    // }
-
-    // setnum.forEach((nums)=>{ //取出上列產生的數字  放到路徑尾端
-    //     console.log(nums);
-    //     $("button > a > img").attr('src', source + nums +'.jpg');
     // });
 
 });
