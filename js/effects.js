@@ -6,21 +6,6 @@ $(document).ready(function(){ //導入頁淡入特效
 
         $(".forFooter").load("footer.html");//移植footer
 
-    // $("a").click(function(){ //開啟指定的房間資料頁面 需修改
-
-    //     if($(this).is('.A')){
-    //         $("#dialog, .room_a").show();
-    //     }
-    //     else if($(this).is('.B')){
-    //         $("#dialog, .room_b").show();
-    //     }
-    //     else if($(this).is('.C')){
-    //         $("#dialog, .room_c").show();
-    //     }
-    //     else if($(this).is('.D')){
-    //         $("#dialog, .room_d").show();
-    //     }
-    // });
 
     /*按鈕生成開始*/
     var num= 25;
@@ -93,5 +78,17 @@ $(document).ready(function(){ //導入頁淡入特效
     //         $(".slider, #JS"+i).show();
 
     // });
+
+
+    /*南郭路*/
+    for(var i=1; i<=(num-3); i++){ //
+        tag= "#NQ";
+        $(".preview_NQ").append("<a class='NQ"+ i +"' href='"+ tag+ i +"'><button class='btn for_center'><img class='centered' src='images/house_NQ"+ ('0' + i).slice(-2)+".jpg'></button></a>");
+    }
+
+      /*塞照片到div.photos*/
+      for(var i=1; i<=(num-3); i++){
+        $(".photo_NQ").append("<img id='NQ"+ i +"' class='centered slider' src='images/house_NQ"+ ('0' + i).slice(-2) +".jpg' >"); 
+    }
 
 });

@@ -9,6 +9,14 @@ a{
     cursor: pointer;
 }
 
+.map{
+    border: 2px solid #222;
+}
+
+.default-cursor{
+    cursor: default;
+}
+
 .placeHolder{
     width: 50%
 }
@@ -67,16 +75,20 @@ div.gateWay > .house > a > h1{
     display: inline-block;
 }
 
+.btn > img{
+    filter: contrast(70%);
+}
+
 .btn:focus{
     outline: none;
 }
 
-.btn:hover{
-    background-color: #ffebc3;
+.btn:hover img{
+    filter: contrast(100%);
+    border: 1px solid #fff;
 }
 
 a > .btn{
-    border: 1px solid #222;
     overflow: hidden;
 }
 
