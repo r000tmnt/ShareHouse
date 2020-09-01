@@ -7,7 +7,7 @@ $(document).ready(function(){ //導入頁淡入特效
         $(".forFooter").load("footer.html");//移植footer
 
 
-    /*按鈕生成開始*/
+    // /*按鈕生成開始*/
     var num= 25;
     var tag= "#JS";
     //('0' + i).slice(-2) 產生圖尾端數字01,02,03....25
@@ -16,6 +16,25 @@ $(document).ready(function(){ //導入頁淡入特效
         $(".img_preview").append("<a class='JS"+ i +"' href='"+ tag+ i +"'><button class='btn for_center'><img class='centered' src='images/house_JS"+ ('0' + i).slice(-2)+".jpg'></button></a>");
     }
     /*按鈕生成結束*/
+
+    // function generateBTN(amount, linktag, imgsource, byclass){
+    //     let i;
+        
+    //     for(i=1; i<=amount; i++){
+    //         var link = $("<a></a>");
+    //         var btn = $("<button class='btn'></button>");
+    //         var img = $("<img>");
+    //         link.attr("href", linktag + i);
+    //         link.append(btn);
+    //         img.attr("src", imgsource + ('0' + i).slice(-2) +".jpg");
+    //         img.attr("id", "JS"+i);
+    //         btn.append(img);
+         
+    //         $(byclass).append(link);
+    //     }
+    // }
+
+    // generateBTN(25, "#JS", "images/house_JS", "img_preview");
     
     /*塞照片到div.photos*/
     for(var i=1; i<=num; i++){

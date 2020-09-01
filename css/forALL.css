@@ -55,7 +55,7 @@ div.gateWay > .house > a > h1{
 
 /*Bottons*/
 
-.img_preview{
+.img_preview, .preview_NQ{
     /* border: 1px solid gold; */
     border-radius: 10px;
     width: 75%;
