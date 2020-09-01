@@ -39,8 +39,8 @@ aside.rooms{
 }
 
 .map > iframe{
-    /* width: 100%; */
-    height: 30vh;
+    width: 100%;
+    height: 35vh;
 }
 
 main.houseFlat{
