@@ -13,7 +13,7 @@ $(document).ready(function(){ //導入頁淡入特效
     //('0' + i).slice(-2) 產生圖尾端數字01,02,03....25
 
     for(var i=1; i<=num; i++){
-        $(".img_preview").append("<a class='JS"+ i +"' href='"+ tag+ i +"'><button class='btn for_center'><img class='centered' src='images/house_JS"+ ('0' + i).slice(-2)+".jpg'></button></a>");
+        $(".previews").append("<a class='JS"+ i +"' href='"+ tag+ i +"'><button class='btn for_center'><img class='centered' src='images/house_JS"+ ('0' + i).slice(-2)+".jpg'></button></a>");
     }
     /*按鈕生成結束*/
 

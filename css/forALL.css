@@ -101,6 +101,8 @@ main.houseFlat > div > img{
 }
 
 .btn > img{
+    width: 100%;
+    height: auto;
     filter: contrast(70%);
 }
 
@@ -115,9 +117,4 @@ main.houseFlat > div > img{
 
 a > .btn{
     overflow: hidden;
-}
-
-.btn > img{
-    width: 100%;
-    height: auto;
 }
