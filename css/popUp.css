@@ -30,7 +30,7 @@
     color: dodgerblue;
 }
 
-.photos{
+.photos, .photo_NQ{
     display: flex;
     justify-content: center;
 }
@@ -41,6 +41,11 @@ h1{
 }
 
 .photos > img{
+    max-width: 50%;
+    cursor: pointer;
+}
+
+.photo_NQ > img{
     max-width: 50%;
     cursor: pointer;
 }

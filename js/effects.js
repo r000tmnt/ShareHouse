@@ -71,7 +71,7 @@ $(document).ready(function(){ //導入頁淡入特效
         }    
     });
 
-    $(".photos").append("<div class='hint'></div>");//產生提示文字的位置
+    $(".photos, .photo_NQ").append("<div class='hint'></div>");//產生提示文字的位置
     $(".hint").html("點圖看下一張");
 
     // $(".toleft").click(function(){
@@ -109,5 +109,27 @@ $(document).ready(function(){ //導入頁淡入特效
       for(var i=1; i<=(num-3); i++){
         $(".photo_NQ").append("<img id='NQ"+ i +"' class='centered slider' src='images/house_NQ"+ ('0' + i).slice(-2) +".jpg' >"); 
     }
+
+    $("a").click(function(){ //打開指定的照片
+        for(var i=1; i<=(num-3); i++){
+            if($(this).is(".NQ"+i)){
+                $("#dialog, #NQ"+i).show();
+            }
+        }
+    });
+
+    $(".slider").click(function(){ //改為點照片換下一張
+        var i;//從1開始對應照片ID
+        
+        for(var i=1; i<=(num-3); i++){
+            if($(this).is("#NQ"+i)){
+             $("#NQ"+(i+1)).show();
+             $("#NQ"+i).hide();
+            }else if($(this).is("#NQ22")){ //若為最後一張照片，則跳至第一張照片
+                $("#NQ1").show();
+                $("#NQ22").hide();
+            }
+        }    
+    });
 
 });

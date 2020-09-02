@@ -117,4 +117,10 @@ div.gateWay > .NQ:hover{
     div.gateWay > .house > a > img{
         object-fit: cover;
     }
+
+    div.gateWay > .house > a > h1{
+        -webkit-text-stroke: 1.5px #222;
+        font-size: 3rem;
+        top: 30vh;
+    }
 }
