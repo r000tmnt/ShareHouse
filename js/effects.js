@@ -105,7 +105,7 @@ $(document).ready(function(){ //導入頁淡入特效
         $(".preview_NQ").append("<a class='NQ"+ i +"' href='"+ tag+ i +"'><button class='btn for_center'><img class='centered' src='images/house_NQ"+ ('0' + i).slice(-2)+".jpg'></button></a>");
     }
 
-      /*塞照片到div.photos*/
+      /*塞照片到div.photo_NQ*/
       for(var i=1; i<=(num-3); i++){
         $(".photo_NQ").append("<img id='NQ"+ i +"' class='centered slider' src='images/house_NQ"+ ('0' + i).slice(-2) +".jpg' >"); 
     }

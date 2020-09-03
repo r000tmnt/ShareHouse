@@ -80,7 +80,7 @@ main.houseFlat > div > img{
 
 /*Bottons*/
 
-.img_preview, .preview_NQ{
+.img_preview{
     /* border: 1px solid gold; */
     border-radius: 10px;
     width: 75%;
@@ -117,4 +117,103 @@ main.houseFlat > div > img{
 
 a > .btn{
     overflow: hidden;
+}
+
+/*RWD*/
+@media(max-width: 1000px){
+    nav > a > h1{
+        white-space: nowrap;
+    }
+
+    .warp{
+        flex-direction: column;
+    }
+
+    .rooms{
+        margin: 0 5vw 0 5vw;
+    }
+
+    .img_preview, .preview_NQ{
+        margin: 3vw auto;
+        width: 90%;
+    }
+
+    .btnImg{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .btnImg > a{
+        flex: 1 0 20%;
+    }
+
+    a > .btn{
+        width: 100%;
+        height: 20vh;
+    }
+
+    a > .btn > img{
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .preview_NQ > a:nth-child(21) > .btn > img{
+        height: auto;
+    }
+
+    .preview_NQ > a:last-child > .btn > img{
+        height: auto;
+    }
+
+    .enlarge > img{
+        max-width: 80% !important;
+    }
+
+    footer > span{
+        margin-right: 20vw;
+    }
+}
+
+@media(max-width: 703px){
+    header > nav{
+        margin-left: 5vw;
+    }
+
+    nav > a > h1{
+        margin-left: 2vw;
+    }
+
+    div.banner{
+        margin-top: 7vh;
+    }
+
+    .btnImg > a{
+        flex: 1 0 30%;
+    }
+
+    a > .btn{
+        width: 100%;
+        height: 20vh;
+    }
+
+    a > .btn > img{
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .preview_NQ > a:last-child > .btn > img{
+        height: auto;
+    }
+
+    .enlarge > img{
+        max-width: 80% !important;
+    }
+
+    footer > .contact{
+        margin-left: 2vw;
+    }
+
+    footer > span{
+        margin-right: 5vw;
+    } 
 }
