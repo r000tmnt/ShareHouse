@@ -71,7 +71,7 @@ $(document).ready(function(){ //導入頁淡入特效
         }    
     });
 
-    $(".photos, .photo_NQ").append("<div class='hint'></div>");//產生提示文字的位置
+    $(".enlarge").append("<div class='hint'></div>");//產生提示文字的位置
     $(".hint").html("點圖看下一張");
 
     // $(".toleft").click(function(){
