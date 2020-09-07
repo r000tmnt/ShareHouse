@@ -22,3 +22,9 @@ nav > a:first-child::before{
     margin-top: 1.2vh;
     animation: indicator 0.5s ease-in-out infinite alternate;
 }
+
+@media(max-width: 1000px){
+    nav > a:first-child::before{
+        margin-top: 0;
+    }
+}

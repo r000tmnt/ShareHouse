@@ -42,3 +42,9 @@ nav > a:last-child::before{
 .clear{
     clear: both;
 }
+
+@media(max-width: 1000px){
+    nav > a:last-child::before{
+        margin-top: 0;
+    }
+}
