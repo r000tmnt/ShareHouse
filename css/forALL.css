@@ -169,6 +169,10 @@ a > .btn{
         max-width: 80% !important;
     }
 
+    footer > .contact{
+        margin-left: 0;
+    }
+
     footer > span{
         margin-right: 20vw;
     }
@@ -209,11 +213,15 @@ a > .btn{
         max-width: 80% !important;
     }
 
+    footer{
+        flex-direction: column;
+    }
+
     footer > .contact{
-        margin-left: 2vw;
+        margin-left: 0;
     }
 
     footer > span{
-        margin-right: 5vw;
+        margin-left: 8vw;
     } 
 }
