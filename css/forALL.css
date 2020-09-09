@@ -170,6 +170,10 @@ a > .btn{
         max-width: 80% !important;
     }
 
+    footer > .contact{
+        margin-left: 0;
+    }
+
     footer > span{
         margin-right: 20vw;
     }

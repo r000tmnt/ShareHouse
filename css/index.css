@@ -26,13 +26,13 @@ body{
 }
 
 a{
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     display: inline-block;
     position: relative;
 }
 
 div.logo{
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     position: absolute;
     width: 100%;
     display: flex;
@@ -73,7 +73,7 @@ div.gateWay > .house > a > img{
 }
 
 div.gateWay > .house > a > h1{
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     text-align: center;
     margin: 0;
     position: absolute;
