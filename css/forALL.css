@@ -123,6 +123,7 @@ a > .btn{
 @media(max-width: 1000px){
     nav > a > h1{
         white-space: nowrap;
+        margin-top: -1vh;
     }
 
     .warp{
@@ -209,11 +210,15 @@ a > .btn{
         max-width: 80% !important;
     }
 
+    footer{
+        flex-direction: column;
+    }
+
     footer > .contact{
-        margin-left: 2vw;
+        margin-left: 0;
     }
 
     footer > span{
-        margin-right: 5vw;
+        margin-left: 8vw;
     } 
 }
