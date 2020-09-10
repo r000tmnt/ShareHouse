@@ -158,11 +158,11 @@ a > .btn{
         object-fit: cover;
     }
 
-    .preview_NQ > a:nth-child(21) > .btn > img{
+    .roomA > a:nth-child(11) > .btn > img{
         height: auto;
     }
 
-    .preview_NQ > a:last-child > .btn > img{
+    .roomA > a:last-child > .btn > img{
         height: auto;
     }
 
@@ -206,7 +206,7 @@ a > .btn{
         object-fit: cover;
     }
 
-    .preview_NQ > a:last-child > .btn > img{
+    .roomB > a:last-child > .btn > img{
         height: auto;
     }
 
