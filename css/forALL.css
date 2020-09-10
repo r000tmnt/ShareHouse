@@ -181,7 +181,7 @@ a > .btn{
 
 @media(max-width: 703px){
     header > nav{
-        margin-left: 5vw;
+        margin: 0 0 0 5vw;
     }
 
     nav > a > h1{
