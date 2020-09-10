@@ -23,7 +23,7 @@ nav{
 nav > a{
     /* border: 1px solid rgba(30, 143, 255); */
     display: inline-block;
-    margin: 0 3vw;
+    margin:2vh 3vw 0;
     margin-top: 3.5vh;
     text-decoration: none;
 }
