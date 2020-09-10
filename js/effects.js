@@ -21,6 +21,7 @@ $(document).ready(function(){ //導入頁淡入特效
     for(var i=1; i<=num; i++){
         $(".photos").append("<img id='JS"+ i +"' class='centered slider' src='images/house_JS"+ ('0' + i).slice(-2) +".jpg' >"); 
     }
+    
 
     $("a").click(function(){ //開啟指定的照片 修改版
         for(var i=1; i<=num; i++){
@@ -34,6 +35,7 @@ $(document).ready(function(){ //導入頁淡入特效
         $("#dialog, .slider").hide();
     });
     
+
     $(".slider").click(function(){ //改為點照片換下一張
         var i;//從1開始對應照片ID
         
@@ -51,10 +53,16 @@ $(document).ready(function(){ //導入頁淡入特效
     $(".enlarge").append("<div class='hint'></div>");//產生提示文字的位置
     $(".hint").html("點圖看下一張");
 
+
     /*南郭路*/
-    for(var i=1; i<=(num-3); i++){ //
+    for(var i=1; i<=12; i++){ //A房間
         tag= "#NQ";
-        $(".preview_NQ").append("<a class='NQ"+ i +"' href='"+ tag+ i +"'><button class='btn for_center'><img class='centered' src='images/house_NQ"+ ('0' + i).slice(-2)+".jpg'></button></a>");
+        $(".roomA").append("<a class='NQ"+ i +"' href='"+ tag+ i +"'><button class='btn for_center'><img class='centered' src='images/house_NQ"+ ('0' + i).slice(-2)+".jpg'></button></a>");
+    }
+
+    for(var i=13; i<=22; i++){ //B房間
+        tag= "#NQ";
+        $(".roomB").append("<a class='NQ"+ i +"' href='"+ tag+ i +"'><button class='btn for_center'><img class='centered' src='images/house_NQ"+ ('0' + i).slice(-2)+".jpg'></button></a>");
     }
 
       /*塞照片到div.photo_NQ*/
