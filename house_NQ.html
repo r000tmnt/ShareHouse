@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>庭園套房</title>
     <link rel="icon" href="images/house_icon.png">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/forALL.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/house_NQ.css">
-    <link rel="stylesheet" href="css/popUp.css">
+    <link rel="stylesheet" href="css/animations.min.css">
+    <link rel="stylesheet" href="css/forALL.min.css">
+    <link rel="stylesheet" href="css/header.min.css">
+    <link rel="stylesheet" href="css/footer.min.css">
+    <link rel="stylesheet" href="css/house_NQ.min.css">
+    <link rel="stylesheet" href="css/popUp.min.css">
 </head>
 <body>
     <div class="forHeader"></div>
@@ -44,8 +44,11 @@
 
     
     <div class="img_preview">
-        <h1 class="default-cursor">照片</h1>
-        <div class="btnImg preview_NQ"></div>
+        <h1 class="default-cursor">A房照片</h1>
+        <div class="btnImg roomA"></div>
+
+        <h1 class="default-cursor">B房照片</h1>
+        <div class="btnImg roomB"></div>
     </div>
 
     <div id="dialog">
@@ -53,13 +56,7 @@
                 <div class="popup">
                     <button class="close">X</button>
                     <div class="enlarge photo_NQ">
-                        <!-- <div class="arrow toleft">
-                            <img src="images/indicatior_arrow_white.png">
-                        </div> -->
                         <!--image slider here-->
-                        <!-- <div class="arrow toright">
-                            <img src="images/indicatior_arrow_white.png">
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -72,7 +69,8 @@
     <div class="clear"></div>
 
     <div class="forFooter"></div>
-    <script src="jQuery/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="jQuery/jquery.min.js"></script> -->
     <script src="js/effects.js"></script>
 </body>
 </html>
