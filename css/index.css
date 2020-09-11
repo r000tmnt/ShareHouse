@@ -1,24 +1,3 @@
-@keyframes warmup{
-    0%{
-        filter: grayscale(50%);
-    }
-    20%{
-        filter: grayscale(40%);
-    }
-    40%{
-        filter: grayscale(30%);
-    }
-    60%{
-        filter: grayscale(20%);
-    }
-    80%{
-        filter: grayscale(10%);
-    }
-    100%{
-        filter: none;
-    }
-}
-
 body{
     margin: 0;
     padding: 0;
@@ -81,6 +60,8 @@ div.gateWay > .house > a > h1{
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
+    font-weight: 500;
+    font-size: 4rem;
     -webkit-text-stroke: 2px #222;
 }
 

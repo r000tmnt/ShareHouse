@@ -1,6 +1,55 @@
 /*Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap');
 
+/*animations*/
+@keyframes hover{
+    0%{
+        color: rgba(30, 143, 255, 0);
+    }
+    25%{
+        color: rgba(30, 143, 255, 0.200);
+    }
+    50%{
+        color: rgba(30, 143, 255, 0.400);
+    }
+    75%{
+        color: rgba(30, 143, 255, 0.600);
+    }
+    100%{
+        color: rgba(30, 143, 255, 0.800);
+    }
+}
+
+@keyframes indicator{
+    from{
+        margin-left: -2vw;
+    }
+    to{
+        margin-left: -2.3vw;
+    }
+}
+
+@keyframes warmup{
+    0%{
+        filter: grayscale(50%);
+    }
+    20%{
+        filter: grayscale(40%);
+    }
+    40%{
+        filter: grayscale(30%);
+    }
+    60%{
+        filter: grayscale(20%);
+    }
+    80%{
+        filter: grayscale(10%);
+    }
+    100%{
+        filter: none;
+    }
+}
+
 body{
     font-family: 'Noto Sans TC', sans-serif;
 }
@@ -11,6 +60,10 @@ a{
 
 .map{
     border: 2px solid #222;
+}
+
+.map > a > img{
+    max-width: 100%;
 }
 
 .default-cursor{
@@ -38,11 +91,6 @@ a{
 
 .font-color{
     color: #222;
-}
-
-div.gateWay > .house > a > h1{
-    font-weight: 500;
-    font-size: 4rem;
 }
 
 div.warp{
@@ -117,6 +165,88 @@ main.houseFlat > div > img{
 
 a > .btn{
     overflow: hidden;
+}
+
+/*PopUp*/
+#dialog{
+    display: none;
+    background-color: rgba(34, 34, 34, 0.900);
+    width: 100%;
+    height: 100vh;
+    top: 50%;    
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    z-index: 2;
+}
+
+.close{
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    font-size: x-large;
+    color: white;
+    float: right;
+    margin: 2vw;
+    cursor: pointer;
+}
+
+.close:focus{
+    outline: none;
+}
+
+.close:hover{
+    border: 2px solid dodgerblue;
+    color: dodgerblue;
+}
+
+.photos, .photo_NQ{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    padding: 0.5vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.photos > img{
+    max-width: 50%;
+    cursor: pointer;
+}
+
+.photo_NQ > img{
+    max-width: 50%;
+    cursor: pointer;
+}
+
+.arrow{
+    margin-top: 50vh;
+    cursor: pointer;
+}
+
+.toleft{
+    transform: rotate(180deg);
+    margin-left: 4vw
+}
+
+.toright{
+    margin-left: auto;
+}
+
+.slider{
+    display: none;
+}
+
+.hint{
+    height: 3vh;
+    padding: 0.5vw;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #222;
+    z-index: 2;
+    margin:2vh  auto 0 2vw;
 }
 
 /*RWD*/

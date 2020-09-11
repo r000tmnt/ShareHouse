@@ -2,9 +2,9 @@ $(document).ready(function(){ //導入頁淡入特效
     $(".JS").hide().fadeIn(1300);
     $(".NQ").hide().fadeIn(2200);
 
-        $(".forHeader").load("header.html");//移植header
+    $(".forHeader").load("header.html");//移植header
 
-        $(".forFooter").load("footer.html");//移植footer
+    $(".forFooter").load("footer.html");//移植footer
 
 
     // /*按鈕生成開始*/
