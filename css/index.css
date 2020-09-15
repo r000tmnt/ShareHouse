@@ -105,3 +105,10 @@ div.gateWay > .NQ:hover{
         top: 30vh;
     }
 }
+
+@media (max-width: 500px){
+    div.gateWay > .house > a > h1{
+        font-size: 2.5rem;
+        white-space: nowrap;
+    }
+}
