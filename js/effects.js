@@ -13,26 +13,22 @@ $(document).ready(function(){ //導入頁淡入特效
     //('0' + i).slice(-2) 產生圖尾端數字01,02,03....25
 
     for(var i=1; i<=num; i++){
-        $(".previews").append("<a class='JS"+ i +"' href='"+ tag+ i +"'><button class='btn for_center'><img class='centered' src='images/house_JS"+ ('0' + i).slice(-2)+".jpg'></button></a>");
+        $(".previews").append("<button id='JS"+ i +"' class='btn for_center'><img class='centered' src='images/house_JS"+ ('0' + i).slice(-2)+".jpg'></button>");
+
+        $("#JS"+ i +"").click(function(){ //推送指定的照片
+            for(var i=1; i<=num; i++){
+                if($(this).is("#JS"+i)){
+                    $(".photos").append("<img class=' JS"+ i +" centered slider' src='images/house_JS"+ ('0' + i).slice(-2) +".jpg' >");   
+                    $("#dialog, .slider").show();
+                }
+            }    
+        });
     }
     /*按鈕生成結束*/
-    
-    /*塞照片到div.photos*/
-    for(var i=1; i<=num; i++){
-        $(".photos").append("<img id='JS"+ i +"' class='centered slider' src='images/house_JS"+ ('0' + i).slice(-2) +".jpg' >"); 
-    }
-    
-
-    $("a").click(function(){ //開啟指定的照片 修改版
-        for(var i=1; i<=num; i++){
-            if($(this).is(".JS"+i)){
-             $("#dialog, #JS"+i).show();
-            }
-        }    
-    });
 
     $(".close").click(function(){ //關閉
-        $("#dialog, .slider").hide();
+        $(".photos").empty();//移除照片
+        $("#dialog").hide();
     });
     
 
@@ -65,10 +61,10 @@ $(document).ready(function(){ //導入頁淡入特效
         $(".roomB").append("<a class='NQ"+ i +"' href='"+ tag+ i +"'><button class='btn for_center'><img class='centered' src='images/house_NQ"+ ('0' + i).slice(-2)+".jpg'></button></a>");
     }
 
-      /*塞照片到div.photo_NQ*/
-      for(var i=1; i<=(num-3); i++){
-        $(".photo_NQ").append("<img id='NQ"+ i +"' class='centered slider' src='images/house_NQ"+ ('0' + i).slice(-2) +".jpg' >"); 
-    }
+    //   /*塞照片到div.photo_NQ*/
+    //   for(var i=1; i<=(num-3); i++){
+    //     $(".photo_NQ").append("<img id='NQ"+ i +"' class='centered slider' src='images/house_NQ"+ ('0' + i).slice(-2) +".jpg' >"); 
+    // }
 
     $("a").click(function(){ //打開指定的照片
         for(var i=1; i<=(num-3); i++){

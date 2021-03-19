@@ -20,7 +20,7 @@ div.banner{
 nav > a:first-child::before{
     content: url("../images/indicatior_arrow.png");
     float: left;
-    margin-top: 1.2vh;
+    margin-top: 1vh;
     animation: indicator 0.5s ease-in-out infinite alternate;
 }
 

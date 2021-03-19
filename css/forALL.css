@@ -2,24 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap');
 
 /*animations*/
-@keyframes hover{
-    0%{
-        color: rgba(30, 143, 255, 0);
-    }
-    25%{
-        color: rgba(30, 143, 255, 0.200);
-    }
-    50%{
-        color: rgba(30, 143, 255, 0.400);
-    }
-    75%{
-        color: rgba(30, 143, 255, 0.600);
-    }
-    100%{
-        color: rgba(30, 143, 255, 0.800);
-    }
-}
-
 @keyframes indicator{
     from{
         margin-left: -2vw;
@@ -98,10 +80,6 @@ div.warp{
     display: flex;
 }
 
-aside.rooms{
-    padding: 0 2vw 0 0;
-}
-
 .info{
     float: right;
     font-size: 2rem;
@@ -114,16 +92,27 @@ aside.rooms{
     height: 35vh;
 }
 
-main.houseFlat{
-    margin: 0 5vw 0 5vw;
+.houseFlat{
+    display: inline-table;
+    margin: 0 5vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0 1% 1% 1%;
+    border-radius: 10px;    
 }
 
-main.houseFlat > div{
+.houseFlat > div{
     position: relative;
 }
 
-main.houseFlat > div > img{
+.houseFlat > div > img{
     max-width: 100%;
+}
+
+.rooms{
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0 1% 1% 1%;
+    margin-right: 2vw;
 }
 
 /*Bottons*/
@@ -133,25 +122,29 @@ main.houseFlat > div > img{
     border-radius: 10px;
     width: 75%;
     margin: 5vh auto;
-    padding: 2vw;
+    padding: 1vw 2vw 2vw 2vw;
     background-color: rgba(255, 255, 255, 0.8);
 }
 
 .btn{
     border: 1px solid #222;
     font-family: 'Noto Sans TC', sans-serif;
-    width: 12vw;
-    height: 15vh;
+    width: 12.3vw;
+    height: 19vh;
     font-size: 2vw;
     background: none;
     cursor: pointer;
     display: inline-block;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 .btn > img{
-    width: 100%;
-    height: auto;
+    width: 207px;
+    height: 207px;
     filter: contrast(70%);
+    object-fit: cover;
+    transition: all 0s ease-in-out;
 }
 
 .btn:focus{
@@ -163,15 +156,11 @@ main.houseFlat > div > img{
     border: 1px solid #fff;
 }
 
-a > .btn{
-    overflow: hidden;
-}
-
 /*PopUp*/
 #dialog{
     display: none;
     background-color: rgba(34, 34, 34, 0.900);
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     top: 50%;    
     left: 50%;
@@ -206,9 +195,10 @@ a > .btn{
 }
 
 h1{
+    margin: 0;
+    margin-bottom: 1vh;
     padding: 0.5vw;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
+    border-bottom: 1px dotted black;
 }
 
 .photos > img{
@@ -250,10 +240,33 @@ h1{
 }
 
 /*RWD*/
+@media(max-width: 1350px){
+    .btn{
+        height: 17vh;
+    }
+}
+
+@media(max-width: 1250px){
+    .houseFlat{
+        margin: 0 2vw;
+    }
+    
+    .img_preview{
+        width: 90%;
+    }
+
+    .btn{
+        width: 14.5vw;
+    }
+}
+
 @media(max-width: 1000px){
     nav > a > h1{
         white-space: nowrap;
-        margin-top: -1vh;
+    }
+
+    .houseFlat{
+        margin-bottom: 3vh;
     }
 
     .warp{
@@ -266,7 +279,7 @@ h1{
 
     .img_preview, .preview_NQ{
         margin: 3vw auto;
-        width: 90%;
+        width: auto;
     }
 
     .btnImg{
@@ -278,14 +291,8 @@ h1{
         flex: 1 0 20%;
     }
 
-    a > .btn{
-        width: 100%;
-        height: 20vh;
-    }
-
-    a > .btn > img{
-        height: 100%;
-        object-fit: cover;
+    .btn{
+        width: 15.5vw;
     }
 
     .roomA > a:nth-child(11) > .btn > img{
@@ -310,8 +317,15 @@ h1{
 }
 
 @media(max-width: 703px){
+    header{
+        flex-direction: column;
+    }
     header > nav{
         margin: 0 0 0 5vw;
+    }
+
+    nav > a {
+        margin-top: 0;
     }
 
     nav > a > h1{
@@ -354,5 +368,11 @@ h1{
 
     footer > span{
         margin-left: 8vw;
+    } 
+}
+
+@media(max-width: 450px){
+    .enlarge > img{
+        max-width: 100% !important;
     } 
 }
