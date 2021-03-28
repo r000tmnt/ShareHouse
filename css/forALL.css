@@ -36,6 +36,14 @@ body{
     font-family: 'Noto Sans TC', sans-serif;
 }
 
+.modal_open{
+    overflow-y: hidden;
+}
+
+.title{
+    border-bottom: 2px double black;
+}
+
 a{
     cursor: pointer;
 }
@@ -126,6 +134,11 @@ div.warp{
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+.btnImg{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .btn{
     border: 1px solid #222;
     font-family: 'Noto Sans TC', sans-serif;
@@ -141,8 +154,8 @@ div.warp{
 }
 
 .btn > img{
-    width: 13vw;
-    height: 18.8vh;
+    width: 250px;
+    height: 185px;
     filter: contrast(70%);
     object-fit: cover;
     transition: all 0s ease-in-out;
@@ -178,6 +191,8 @@ div.warp{
     float: right;
     margin: 1.5vw;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
 }
 
 .close:focus{
@@ -270,11 +285,6 @@ div.warp{
     .btn{
         width: 14.5vw;
     }
-
-    .btn > img{
-        width: 15vw;
-        height: 17vh;
-    }
 }
 
 @media(max-width: 1000px){
@@ -297,15 +307,6 @@ div.warp{
     .img_preview, .preview_NQ{
         margin: 3vw auto;
         width: auto;
-    }
-
-    .btnImg{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .btnImg > a{
-        flex: 1 0 20%;
     }
 
     .btn{
@@ -351,10 +352,6 @@ div.warp{
         margin-top: 0;
     }
 
-    .btnImg > a{
-        flex: 1 0 30%;
-    }
-
     .btn{
         height: 14vh;
     }
@@ -378,11 +375,21 @@ div.warp{
 
 @media(max-width: 670px){
     .btn{
-        width: 31.5vw;
+        width: 30.5vw;
         height: 14.5vh;
     }
 
+    .close{
+        margin: 3.5%;
+    }
+
+    .enlarge > img{
+        max-width: 80% !important;
+    } 
+}
+
+@media(max-width: 600px){
     .enlarge > img{
         max-width: 100% !important;
-    } 
+    }  
 }

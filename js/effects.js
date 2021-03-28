@@ -8,72 +8,68 @@ $(document).ready(function(){ //導入頁淡入特效
 
     // /*按鈕生成開始*/
     var num= 25;
-    //('0' + i).slice(-2) 產生圖尾端數字01,02,03....25
 
     for(let i=1; i<=num; i++){
-        $(".previews").append("<button id='JS"+ i +"' class='btn for_center'><img class='centered' src='images/house_JS"+ ('0' + i).slice(-2)+".jpg'></button>");
+        $(".previews").append("<button id='JS"+ i +"' class='btn for_center'><img class='centered' src='images/house_JS"+ i +".jpg'></button>");
     }
 
     /*南郭路*/
     for(var i=1; i<=12; i++){ //A房間
-        tag= "#NQ";
-        $(".roomA").append("<button id='NQ"+ i +"' class='btn for_center'><img class='NQ"+ i +"'centered' src='images/house_NQ"+ ('0' + i).slice(-2)+".jpg'></button>");
+        $(".roomA").append("<button id='NQ"+ i +"' class='btn for_center'><img class='NQ"+ i +"'centered' src='images/house_NQ"+ i +".jpg'></button>");
     }
 
     for(var i=13; i<=22; i++){ //B房間
-        tag= "#NQ";
-        $(".roomB").append("<button id='NQ"+ i +"' class='btn for_center'><img class='NQ"+ i +"'centered' src='images/house_NQ"+ ('0' + i).slice(-2)+".jpg'></button>");
+        $(".roomB").append("<button id='NQ"+ i +"' class='btn for_center'><img class='NQ"+ i +"'centered' src='images/house_NQ"+ i +".jpg'></button>");
     }
-    
-    $("button").click(function(){ //推送指定的照片
-        for(let i=1; i<=num; i++){
-            if($(this).is("#JS"+i)){
-                $(".photos").append("<img tag='JS"+ i +"' class='centered slider' src='images/house_JS"+ ('0' + i).slice(-2) +".jpg' >");   
-                $("#dialog").show();
-            }
 
-            if($(this).is("#NQ"+i)){
-                $(".photos").append("<img tag='NQ"+ i +"' class='centered slider' src='images/house_NQ"+ ('0' + i).slice(-2)+".jpg'>");   
-                $("#dialog").show();                    
+    var bIDs = []
+    $('.btn').each(function(){
+        bIDs.push($(this).attr('id')) 
+    })
+    
+    $(".btn").click(function(){ //推送指定的照片
+        for(let i=0; i<=bIDs.length; i++){
+            if($(this).attr('id') === bIDs[i]){
+                $(".photos").append("<img tag='"+ bIDs[i] +"' class='centered slider' src='images/house_"+ bIDs[i] +".jpg' >");
+                setBody();   
+                return $("#dialog").show();
             }
-        }    
+        } 
     });
+
+    function setBody(){
+        if($('body').is('.modal_open')){
+            $('body').removeClass('modal_open')
+        }else{
+           $('body').attr('class', 'modal_open'); 
+        }
+        
+    }
 
     $(".close").click(function(){ //關閉
-        $(".photos").empty();//移除照片
         $("#dialog").hide();
+        setBody();
+        $(".photos").empty();//移除照片
     });
     
-    $("#right").click(function(){ //改為點照片換下一張
-        for(let i=1; i<=num; i++){
+    $("#right").click(function(){ //往右切換
+        for(let i=0; i<= bIDs.length; i++){
             let tag = $('.slider').attr('tag');
-            if(tag === 'JS'+num){ //若為最後一張照片，則跳至第一張照片
-                $(".photos").html("<img tag='JS1' class='centered slider' src='images/house_JS01.jpg'>");
-            }else if(tag === 'JS'+i){
-                return $(".photos").html("<img tag='JS"+ (i+1) +"' class='centered slider' src='images/house_JS"+ ('0' + (i+1)).slice(-2)+".jpg'>");
-            }
-
-            if(tag === 'NQ'+ (num-3)){ //若為最後一張照片，則跳至第一張照片
-                $(".photos").html("<img tag='NQ1' class='centered slider' src='images/house_NQ01.jpg'>");
-            }else if(tag === 'NQ'+i){
-                return $(".photos").html("<img tag='NQ"+ (i+1) +"' class='centered slider' src='images/house_NQ"+ ('0' + (i+1)).slice(-2)+".jpg'>");
+            if(tag === bIDs[bIDs.length-1]){ //若為最後一張照片，則跳至第一張照片
+                $(".photos").html("<img tag='"+ bIDs[0] +"' class='centered slider' src='images/house_"+ bIDs[0] +".jpg'>");
+            }else if(tag === bIDs[i]){
+                return $(".photos").html("<img tag='"+ bIDs[i+1] +"' class='centered slider' src='images/house_"+ bIDs[i+1] +".jpg'>");
             }
         }    
     });
 
-    $("#left").click(function(){ //改為點照片換下一張
-        for(let i=1; i<=num; i++){
+    $("#left").click(function(){ //往左切換
+        for(let i=0; i<= bIDs.length; i++){
             let tag = $('.slider').attr('tag');
-            if(tag === 'JS1'){ //若為最後一張照片，則跳至第一張照片
-                return $(".photos").html("<img tag='JS"+num+"' class='centered slider' src='images/house_JS"+num+".jpg'>");
-            }else if(tag === 'JS'+i){
-                return $(".photos").html("<img tag='JS"+ (i-1) +"' class='centered slider' src='images/house_JS"+ ('0' + (i-1)).slice(-2)+".jpg'>");
-            }
-
-            if(tag === 'NQ1'){ //若為最後一張照片，則跳至第一張照片
-                return $(".photos").html("<img tag='NQ"+(num-3)+"' class='centered slider' src='images/house_NQ"+(num-3)+".jpg'>");
-            }else if(tag === 'NQ'+i){
-                return $(".photos").html("<img tag='NQ"+ (i-1) +"' class='centered slider' src='images/house_NQ"+ ('0' + (i-1)).slice(-2)+".jpg'>");
+            if(tag === bIDs[0]){ //若為第一張照片，則跳至最後一張照片
+                $(".photos").html("<img tag='"+ bIDs[bIDs.length-1] +"' class='centered slider' src='images/house_"+ bIDs[bIDs.length-1] +".jpg'>");
+            }else if(tag === bIDs[i]){
+                return $(".photos").html("<img tag='"+ bIDs[i-1] +"' class='centered slider' src='images/house_"+ bIDs[i-1] +".jpg'>");
             }
         }    
     });
