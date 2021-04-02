@@ -1,6 +1,4 @@
 $(document).ready(function(){ //導入頁淡入特效
-    $(".JS").hide().fadeIn(1300);
-    $(".NQ").hide().fadeIn(2200);
 
     $(".forHeader").load("header.html");//移植header
 
@@ -9,19 +7,22 @@ $(document).ready(function(){ //導入頁淡入特效
     // /*按鈕生成開始*/
     var num= 25;
 
-    for(let i=1; i<=num; i++){
-        $(".previews").append("<button id='JS"+ i +"' class='btn for_center'><img class='centered' src='images/house_JS"+ i +".jpg'></button>");
+    if($(".preview")){
+        for(let i=1; i<=num; i++){
+            $(".previews").append("<button id='JS"+ i +"' class='btn for_center'><img class='centered' src='images/house_JS"+ i +".jpg'></button>");
+        }
     }
 
-    /*南郭路*/
-    for(var i=1; i<=12; i++){ //A房間
-        $(".roomA").append("<button id='NQ"+ i +"' class='btn for_center'><img class='NQ"+ i +"'centered' src='images/house_NQ"+ i +".jpg'></button>");
+    if($(".roomA")){/*南郭路*/
+        for(var i=1; i<=12; i++){ //A房間
+            $(".roomA").append("<button id='NQ"+ i +"' class='btn for_center'><img class='NQ"+ i +"'centered' src='images/house_NQ"+ i +".jpg'></button>");
+        }
+    
+        for(var i=13; i<=22; i++){ //B房間
+            $(".roomB").append("<button id='NQ"+ i +"' class='btn for_center'><img class='NQ"+ i +"'centered' src='images/house_NQ"+ i +".jpg'></button>");
+        }
     }
-
-    for(var i=13; i<=22; i++){ //B房間
-        $(".roomB").append("<button id='NQ"+ i +"' class='btn for_center'><img class='NQ"+ i +"'centered' src='images/house_NQ"+ i +".jpg'></button>");
-    }
-
+    
     var bIDs = []
     $('.btn').each(function(){
         bIDs.push($(this).attr('id')) 

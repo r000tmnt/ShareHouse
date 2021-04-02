@@ -4,12 +4,12 @@ header{
     margin: 2.5vh;
 }
 
-div.logo{
+.logo{
     /*border: 1px solid blue;*/
     margin-left: 2vw;
 }
 
-div.logo > a > img{
+.logo > a > img{
     max-width: 100%;
     filter: drop-shadow(5px 2px 5px #222);
 }
@@ -36,20 +36,18 @@ div.banner{
     background-position: center;
 }
 
-div#house_JS{
-    background-image: url("../images/house_JS8.jpg");
-}
-
-div#house_NQ{
-    background-image: url("../images/house_NQ1.jpg");
-}
-
 a > h1{
     border: 1px solid rgba(34, 34, 34, 0);
-    margin: 0;
+    margin: 2% 0;
     color: #222;
 }
 
 nav > a:hover h1{
     color: deepskyblue;
+}
+
+@media screen and (max-width: 734px){
+    .logo{
+        margin: 0 auto;
+    }
 }
